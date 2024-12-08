@@ -15,7 +15,7 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 	get_tree().paused = false
-	if Globals.nivel > 2:
+	if Globals.nivel > Globals.cant_niveles:
 		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 		return
 	get_tree().change_scene_to_file("res://scenes/nivel" + str(Globals.nivel) + ".tscn")

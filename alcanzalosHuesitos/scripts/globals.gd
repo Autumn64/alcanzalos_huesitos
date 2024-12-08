@@ -4,6 +4,7 @@ var nivel = 1
 var vidas = 3
 var puntos = 0
 var maxp = 0
+const cant_niveles = 3
 
 func ob_maxp() -> String:
 	return str(maxp)

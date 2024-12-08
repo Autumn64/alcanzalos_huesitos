@@ -122,15 +122,15 @@ autoplay = "default"
 
 [node name="RayCastIzq" type="RayCast2D" parent="."]
 position = Vector2(0, 4)
-target_position = Vector2(-11, 0)
+target_position = Vector2(-8, 0)
 
 [node name="RayCastDer" type="RayCast2D" parent="."]
 position = Vector2(0, 4)
-target_position = Vector2(10, 0)
+target_position = Vector2(8, 0)
 
 [node name="RayCastAbj" type="RayCast2D" parent="."]
 position = Vector2(0, 4)
-target_position = Vector2(0, 6)
+target_position = Vector2(0, 8)
 
 [node name="Killzone" type="Area2D" parent="."]
 collision_mask = 4

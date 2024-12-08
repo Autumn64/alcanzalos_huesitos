@@ -10,6 +10,18 @@ var music
 
 
 func _physics_process(delta: float) -> void:
+	
+	if Input.is_action_just_pressed("Start") and Engine.time_scale == 0.00000000000001:
+		bgm.play(music)
+		Engine.time_scale = 1
+	elif Input.is_action_just_pressed("Start") and Engine.time_scale == 1:
+		music = bgm.get_playback_position()
+		bgm.stop()
+		Engine.time_scale = 0.00000000000001
+	
+	if Engine.time_scale == 0.00000000000001 or get_tree().paused == true:
+		return
+	
 	# Add the gravity.
 	if not is_on_floor():
 		if sprite.animation != "saltar":
@@ -20,14 +32,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("Saltar") and is_on_floor():
 		salto.play()
 		velocity.y = JUMP_VELOCITY
-
-	if Input.is_action_just_pressed("Start") and Engine.time_scale == 0.00000000000001:
-		bgm.play(music)
-		Engine.time_scale = 1
-	elif Input.is_action_just_pressed("Start") and Engine.time_scale == 1:
-		music = bgm.get_playback_position()
-		bgm.stop()
-		Engine.time_scale = 0.00000000000001
 		
 	var direction := Input.get_axis("Izquierda", "Derecha")
 	
