@@ -7,4 +7,5 @@ func _ready():
 
 func _on_timer_timeout() -> void:
 	Globals.vidas = 3
+	Globals.nivel = 1
 	get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
