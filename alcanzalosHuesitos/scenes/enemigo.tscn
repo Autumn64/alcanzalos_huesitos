@@ -1,0 +1,151 @@
+[gd_scene load_steps=19 format=3 uid="uid://blm4fv82v5ty5"]
+
+[ext_resource type="Texture2D" uid="uid://cs1ixcpnt1ywl" path="res://assets/sprites/mucu-sheetv2x10.png" id="1_a125i"]
+[ext_resource type="Script" path="res://scripts/enemigo.gd" id="1_uub3p"]
+[ext_resource type="AudioStream" uid="uid://1hx5x8dl7ttk" path="res://assets/sfx/dead.ogg" id="3_2rl5d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4awb"]
+atlas = ExtResource("1_a125i")
+region = Rect2(0, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuv3m"]
+atlas = ExtResource("1_a125i")
+region = Rect2(160, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tn8ak"]
+atlas = ExtResource("1_a125i")
+region = Rect2(320, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pwwu"]
+atlas = ExtResource("1_a125i")
+region = Rect2(480, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlqe6"]
+atlas = ExtResource("1_a125i")
+region = Rect2(640, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0x0c"]
+atlas = ExtResource("1_a125i")
+region = Rect2(800, 0, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_544a4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4awb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fuv3m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tn8ak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pwwu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlqe6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0x0c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyaqs"]
+atlas = ExtResource("1_a125i")
+region = Rect2(0, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1tlk"]
+atlas = ExtResource("1_a125i")
+region = Rect2(160, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3f8m4"]
+atlas = ExtResource("1_a125i")
+region = Rect2(320, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqi7w"]
+atlas = ExtResource("1_a125i")
+region = Rect2(480, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fgau"]
+atlas = ExtResource("1_a125i")
+region = Rect2(640, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsf42"]
+atlas = ExtResource("1_a125i")
+region = Rect2(800, 160, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ymi4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyaqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1tlk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3f8m4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqi7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fgau")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsf42")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ccvul"]
+radius = 6.0
+
+[node name="Enemigo" type="Node2D"]
+script = ExtResource("1_uub3p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_544a4")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_4ymi4")
+autoplay = "default"
+
+[node name="RayCastIzq" type="RayCast2D" parent="."]
+position = Vector2(0, 4)
+target_position = Vector2(-11, 0)
+
+[node name="RayCastDer" type="RayCast2D" parent="."]
+position = Vector2(0, 4)
+target_position = Vector2(10, 0)
+
+[node name="RayCastAbj" type="RayCast2D" parent="."]
+position = Vector2(0, 4)
+target_position = Vector2(0, 6)
+
+[node name="Killzone" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_ccvul")
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 3
+wait_time = 8.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("3_2rl5d")
+
+[connection signal="body_entered" from="Killzone" to="." method="_on_killzone_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

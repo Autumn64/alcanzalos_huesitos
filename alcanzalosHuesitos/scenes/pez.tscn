@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5jlbaq2v2y0q"]
+
+[ext_resource type="Texture2D" uid="uid://pokqgcw7mw6m" path="res://assets/sprites/pescadinv1.png" id="1_bbfvc"]
+[ext_resource type="Script" path="res://scripts/pez.gd" id="1_nhx8c"]
+[ext_resource type="AudioStream" uid="uid://dqp7omie6eq8l" path="res://assets/sfx/won.ogg" id="3_tsine"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c2vir"]
+radius = 6.32456
+
+[node name="Pez" type="Area2D"]
+collision_mask = 4
+script = ExtResource("1_nhx8c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bbfvc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_c2vir")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("3_tsine")
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 3
+wait_time = 5.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

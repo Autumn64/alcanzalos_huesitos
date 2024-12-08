@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://bxb84q6nn62qa"]
+
+[ext_resource type="Texture2D" uid="uid://c340r6kkcc81b" path="res://assets/sprites/monedav1.png" id="1_2jhfx"]
+[ext_resource type="Script" path="res://scripts/moneda.gd" id="1_pkwq4"]
+[ext_resource type="AudioStream" uid="uid://ct80kpi7lec7t" path="res://assets/sfx/coin.ogg" id="3_wtgjn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05vae"]
+atlas = ExtResource("1_2jhfx")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mry8q"]
+atlas = ExtResource("1_2jhfx")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sw212"]
+atlas = ExtResource("1_2jhfx")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjaqq"]
+atlas = ExtResource("1_2jhfx")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irkfg"]
+atlas = ExtResource("1_2jhfx")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ca0ra"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05vae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mry8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sw212")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjaqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irkfg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q0qol"]
+radius = 3.0
+
+[node name="Moneda" type="Area2D"]
+collision_mask = 4
+script = ExtResource("1_pkwq4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ca0ra")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_q0qol")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_wtgjn")
+volume_db = 1.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
