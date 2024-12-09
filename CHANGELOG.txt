@@ -15,6 +15,9 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 CHANGELOG:
 
+2024.12.09  Mónica Gómez (Autumn64):
+	- Arreglado bug con los enemigos en las plataformas
+
 2024.12.08  Mónica Gómez (Autumn64):
     - Agregado segundo nivel
     - Extendido tercer nivel

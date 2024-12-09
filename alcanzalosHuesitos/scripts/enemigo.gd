@@ -2,7 +2,8 @@ extends Node2D
 
 @onready var ray_cast_izq: RayCast2D = $RayCastIzq
 @onready var ray_cast_der: RayCast2D = $RayCastDer
-@onready var ray_cast_abj: RayCast2D = $RayCastAbj
+@onready var ray_cast_abj_izq: RayCast2D = $RayCastAbjIzq
+@onready var ray_cast_abj_der: RayCast2D = $RayCastAbjDer
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animated_sprite_2: AnimatedSprite2D = $AnimatedSprite2D2
 @onready var audio_stream: AudioStreamPlayer2D = $AudioStreamPlayer2D
@@ -19,8 +20,10 @@ func _process(delta: float) -> void:
 		dir = -1
 	if ray_cast_izq.is_colliding():
 		dir = 1
-	if not ray_cast_abj.is_colliding():
-		dir *= -1
+	if not ray_cast_abj_izq.is_colliding():
+		dir = 1
+	if not ray_cast_abj_der.is_colliding():
+		dir = -1
 	
 	if dir == 1:
 		animated_sprite.flip_h = true

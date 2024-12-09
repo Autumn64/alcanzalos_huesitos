@@ -6,12 +6,13 @@ const JUMP_VELOCITY = -300.0
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var salto: AudioStreamPlayer2D = $Salto
 @onready var bgm: AudioStreamPlayer2D = $"../BGM"
-var music
+var music: float = 0.0
 
 
 func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("Start") and Engine.time_scale == 0.00000000000001:
+		bgm.play()
 		bgm.play(music)
 		Engine.time_scale = 1
 	elif Input.is_action_just_pressed("Start") and Engine.time_scale == 1:
