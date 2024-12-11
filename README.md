@@ -1,9 +1,9 @@
 # ¡Alcánzalos, Huesitos!
 
-[![Pull requests](https://img.shields.io/badge/dynamic/json.svg?label=pull%20requests&style=for-the-badge&color=limegreen&url=https://codeberg.org/api/v1/repos/Autumn64/alcanzalos_huesitos&query=open_pr_counter)](https://codeberg.org/Autumn64/alcanzalos_huesitos/pulls)
-[![Issues](https://img.shields.io/badge/dynamic/json.svg?label=issues&style=for-the-badge&color=red&url=https://codeberg.org/api/v1/repos/Autumn64/alcanzalos_huesitos&query=open_issues_count)](https://codeberg.org/Autumn64/alcanzalos_huesitos/issues)
-[![Stars](https://img.shields.io/badge/dynamic/json.svg?label=stars&style=for-the-badge&color=yellow&url=https://codeberg.org/api/v1/repos/Autumn64/alcanzalos_huesitos&query=stars_count)](https://codeberg.org/Autumn64/alcanzalos_huesitos)
-[![License](https://img.shields.io/badge/license-AGPL_v3-blue?label=license&style=for-the-badge&url=)](https://codeberg.org/Autumn64/alcanzalos_huesitos/src/branch/main/LICENSE)
+![Pull Requests](https://img.shields.io/github/issues-pr/Autumn64/alcanzalos_huesitos?style=for-the-badge&color=green)
+![Issues](https://img.shields.io/github/issues/Autumn64/alcanzalos_huesitos?style=for-the-badge&color=red)
+![Stars](https://img.shields.io/github/stars/Autumn64/alcanzalos_huesitos?style=for-the-badge&color=yellow)
+[![License](https://img.shields.io/badge/license-AGPL_v3-blue?label=license&style=for-the-badge&url=)](https://github.com/Autumn64/alcanzalos_huesitos/blob/main/LICENSE)
 
 ## Huesitos se ha perdido. Ayúdalo a encontrar el único pescado que tiene de comida.
 
