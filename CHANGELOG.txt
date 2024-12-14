@@ -18,6 +18,7 @@ CHANGELOG:
 2024.12.14  Mónica Gómez (Autumn64):
     - Agregadas pantallas de transición entre niveles
     - Agregado sistema de puntos basado en las vidas actuales
+    - Modificado HUD de pantallas de transición
 
 2024.12.11  Mónica Gómez (Autumn64):
 	- Migración de repositorio

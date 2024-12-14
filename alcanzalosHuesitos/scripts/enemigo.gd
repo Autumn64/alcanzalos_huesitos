@@ -48,4 +48,4 @@ func _on_timer_timeout() -> void:
 	if Globals.vidas < 1:
 		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 		return
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://scenes/new_level.tscn")
