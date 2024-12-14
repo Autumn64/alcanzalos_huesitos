@@ -312,6 +312,9 @@ position = Vector2(167, -24)
 [node name="Enemigo4" parent="Enemigos" instance=ExtResource("4_1ueug")]
 position = Vector2(209, -552)
 
+[node name="Enemigo5" parent="Enemigos" instance=ExtResource("4_1ueug")]
+position = Vector2(107, -424)
+
 [node name="Monedas" type="Node" parent="."]
 
 [node name="Moneda" parent="Monedas" instance=ExtResource("5_45iee")]

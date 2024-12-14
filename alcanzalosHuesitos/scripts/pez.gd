@@ -9,13 +9,9 @@ func _on_body_entered(body: Node2D) -> void:
 	bgm.stop()
 	audio_stream_player_2d.play()
 	Globals.aumentar_puntos(100)
-	Globals.mover_vidas(1)
 	Globals.aumentar_nivel()
 	get_tree().paused = true
 
 func _on_timer_timeout() -> void:
 	get_tree().paused = false
-	if Globals.nivel > Globals.cant_niveles:
-		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
-		return
-	get_tree().change_scene_to_file("res://scenes/nivel" + str(Globals.nivel) + ".tscn")
+	get_tree().change_scene_to_file("res://scenes/level_change.tscn")

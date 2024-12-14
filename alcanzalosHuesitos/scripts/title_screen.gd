@@ -7,7 +7,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Start"):
-		get_tree().change_scene_to_file("res://scenes/nivel1.tscn")
+		get_tree().change_scene_to_file("res://scenes/new_level.tscn")
 	
 	if Input.is_action_pressed("Select"):
 		get_tree().change_scene_to_file("res://scenes/credits.tscn")
