@@ -1,9 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://8jv4wvdpvqs4"]
+[gd_scene load_steps=27 format=3 uid="uid://8jv4wvdpvqs4"]
 
 [ext_resource type="PackedScene" uid="uid://c5jlbaq2v2y0q" path="res://scenes/pez.tscn" id="1_bvges"]
 [ext_resource type="Script" path="res://scripts/level_onload.gd" id="1_sp6nv"]
 [ext_resource type="Texture2D" uid="uid://ctp3kg8yatt2a" path="res://assets/tiles/TILEMAP V2.png" id="1_uy5fl"]
 [ext_resource type="PackedScene" uid="uid://ca8dvp74qej47" path="res://scenes/jugador.tscn" id="2_brccd"]
+[ext_resource type="PackedScene" uid="uid://bgorry5g2j1bq" path="res://scenes/controles.tscn" id="2_kma2y"]
 [ext_resource type="PackedScene" uid="uid://r1qnyd02wk0u" path="res://scenes/plataforma.tscn" id="3_lycc7"]
 [ext_resource type="PackedScene" uid="uid://blm4fv82v5ty5" path="res://scenes/enemigo.tscn" id="4_1ueug"]
 [ext_resource type="PackedScene" uid="uid://bxb84q6nn62qa" path="res://scenes/moneda.tscn" id="5_45iee"]
@@ -342,6 +343,8 @@ attenuation = 0.01
 position = Vector2(232, -552)
 
 [node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Controles" parent="HUD" instance=ExtResource("2_kma2y")]
 
 [node name="Puntos" type="Label" parent="HUD"]
 offset_left = 17.0

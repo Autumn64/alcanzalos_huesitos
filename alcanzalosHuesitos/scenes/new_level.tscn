@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bs1ng8upkkbmq"]
+[gd_scene load_steps=8 format=3 uid="uid://bs1ng8upkkbmq"]
 
 [ext_resource type="Script" path="res://scripts/new_level.gd" id="1_gorn3"]
 [ext_resource type="Texture2D" uid="uid://ctp3kg8yatt2a" path="res://assets/tiles/TILEMAP V2.png" id="2_8ug4c"]
 [ext_resource type="FontFile" uid="uid://c37hc5mf3rtpb" path="res://assets/fonts/Pixel_NES.otf" id="3_2tujo"]
 [ext_resource type="Texture2D" uid="uid://bw1hfl0hhgour" path="res://assets/sprites/gatitosheetv2.png" id="4_e1xwl"]
+[ext_resource type="PackedScene" uid="uid://bgorry5g2j1bq" path="res://scenes/controles.tscn" id="5_n8k35"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58n3a"]
 texture = ExtResource("2_8ug4c")
@@ -129,5 +130,7 @@ offset_bottom = 31.0
 theme_override_fonts/font = ExtResource("3_2tujo")
 theme_override_font_sizes/font_size = 12
 text = "X "
+
+[node name="Controles" parent="." instance=ExtResource("5_n8k35")]
 
 [connection signal="timeout" from="TimerFinal" to="." method="_on_timer_final_timeout"]

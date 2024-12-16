@@ -12,8 +12,7 @@ var music: float = 0.0
 func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("Start") and Engine.time_scale == 0.00000000000001:
-		bgm.play()
-		bgm.play(music)
+		if bgm.playing == false: bgm.play(music)
 		Engine.time_scale = 1
 	elif Input.is_action_just_pressed("Start") and Engine.time_scale == 1:
 		music = bgm.get_playback_position()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cqj6egl7hm5yc"]
+[gd_scene load_steps=24 format=3 uid="uid://cqj6egl7hm5yc"]
 
 [ext_resource type="Script" path="res://scripts/level_onload.gd" id="1_8cffb"]
 [ext_resource type="Texture2D" uid="uid://ctp3kg8yatt2a" path="res://assets/tiles/TILEMAP V2.png" id="2_n4bx5"]
@@ -11,6 +11,7 @@
 [ext_resource type="FontFile" uid="uid://c37hc5mf3rtpb" path="res://assets/fonts/Pixel_NES.otf" id="9_8xyid"]
 [ext_resource type="Texture2D" uid="uid://bw1hfl0hhgour" path="res://assets/sprites/gatitosheetv2.png" id="10_04ah6"]
 [ext_resource type="Texture2D" uid="uid://orhggmlfa8u1" path="res://assets/sprites/hearts.png" id="11_ihpre"]
+[ext_resource type="PackedScene" uid="uid://bgorry5g2j1bq" path="res://scenes/controles.tscn" id="12_wwiiq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6mco1"]
 texture = ExtResource("2_n4bx5")
@@ -374,6 +375,9 @@ attenuation = 0.01
 position = Vector2(16.1919, -1236.11)
 
 [node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Controles" parent="HUD" instance=ExtResource("12_wwiiq")]
+rotation = 0.0055079
 
 [node name="Puntos" type="Label" parent="HUD"]
 offset_left = 17.0

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnbqf4x0aanvx"]
+[gd_scene load_steps=7 format=3 uid="uid://cnbqf4x0aanvx"]
 
 [ext_resource type="Script" path="res://scripts/credits.gd" id="1_61us6"]
 [ext_resource type="Texture2D" uid="uid://ctp3kg8yatt2a" path="res://assets/tiles/TILEMAP V2.png" id="2_uflqx"]
 [ext_resource type="FontFile" uid="uid://c37hc5mf3rtpb" path="res://assets/fonts/Pixel_NES.otf" id="3_8kpox"]
+[ext_resource type="PackedScene" uid="uid://bgorry5g2j1bq" path="res://scenes/controles.tscn" id="4_ax78n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58n3a"]
 texture = ExtResource("2_uflqx")
@@ -118,11 +119,13 @@ Mónica Gómez
 horizontal_alignment = 1
 
 [node name="HI" type="Label" parent="."]
-offset_left = 2.0
-offset_top = 222.0
-offset_right = 256.0
-offset_bottom = 245.0
+offset_left = -6.0
+offset_top = 218.0
+offset_right = 248.0
+offset_bottom = 241.0
 theme_override_fonts/font = ExtResource("3_8kpox")
 theme_override_font_sizes/font_size = 10
-text = "Presiona Enter para continuar"
+text = "> Continuar"
 horizontal_alignment = 1
+
+[node name="Controles" parent="." instance=ExtResource("4_ax78n")]

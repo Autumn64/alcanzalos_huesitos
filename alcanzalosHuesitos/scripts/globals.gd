@@ -1,5 +1,6 @@
 extends Node
 
+var controles = false
 var nivel = 1
 var vidas = 3
 var puntos = 0

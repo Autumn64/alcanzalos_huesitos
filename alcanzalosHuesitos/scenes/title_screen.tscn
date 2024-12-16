@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://blny0akng06eq"]
+[gd_scene load_steps=8 format=3 uid="uid://blny0akng06eq"]
 
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_26ogf"]
 [ext_resource type="Texture2D" uid="uid://ctp3kg8yatt2a" path="res://assets/tiles/TILEMAP V2.png" id="1_sqw4s"]
 [ext_resource type="FontFile" uid="uid://c37hc5mf3rtpb" path="res://assets/fonts/Pixel_NES.otf" id="2_u03i6"]
 [ext_resource type="Texture2D" uid="uid://djc21uc2qobwg" path="res://assets/sprites/iconogatov1.png" id="4_of3m3"]
+[ext_resource type="PackedScene" uid="uid://bgorry5g2j1bq" path="res://scenes/controles.tscn" id="5_d2ynm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58n3a"]
 texture = ExtResource("1_sqw4s")
@@ -101,14 +102,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Jugar" type="Label" parent="."]
-offset_left = 1.0
-offset_top = 182.0
-offset_right = 256.0
-offset_bottom = 231.0
+offset_left = -7.0
+offset_top = 193.0
+offset_right = 248.0
+offset_bottom = 242.0
 theme_override_fonts/font = ExtResource("2_u03i6")
 theme_override_font_sizes/font_size = 11
-text = "Presiona ENTER
-para iniciar"
+text = "> Iniciar"
 horizontal_alignment = 1
 
 [node name="HI" type="Label" parent="."]
@@ -125,3 +125,5 @@ horizontal_alignment = 1
 position = Vector2(127, 70)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("4_of3m3")
+
+[node name="Controles" parent="." instance=ExtResource("5_d2ynm")]

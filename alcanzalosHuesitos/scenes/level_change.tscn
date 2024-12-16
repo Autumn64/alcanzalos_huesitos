@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b4l3oncbyh7kq"]
+[gd_scene load_steps=8 format=3 uid="uid://b4l3oncbyh7kq"]
 
 [ext_resource type="Script" path="res://scripts/level_change.gd" id="1_xg6uo"]
 [ext_resource type="Texture2D" uid="uid://ctp3kg8yatt2a" path="res://assets/tiles/TILEMAP V2.png" id="2_tjf60"]
 [ext_resource type="FontFile" uid="uid://c37hc5mf3rtpb" path="res://assets/fonts/Pixel_NES.otf" id="3_nkf1q"]
 [ext_resource type="AudioStream" uid="uid://ct80kpi7lec7t" path="res://assets/sfx/coin.ogg" id="4_j8sdg"]
+[ext_resource type="PackedScene" uid="uid://bgorry5g2j1bq" path="res://scenes/controles.tscn" id="5_oibol"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58n3a"]
 texture = ExtResource("2_tjf60")
@@ -146,6 +147,8 @@ autostart = true
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 stream = ExtResource("4_j8sdg")
+
+[node name="Controles" parent="." instance=ExtResource("5_oibol")]
 
 [connection signal="timeout" from="TimerVidas" to="." method="_on_timer_vidas_timeout"]
 [connection signal="timeout" from="TimerTotal" to="." method="_on_timer_total_timeout"]
