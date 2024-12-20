@@ -15,6 +15,10 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 CHANGELOG:
 
+2024.12.19  Mónica Gómez (Autumn64):
+    - Agregado sistema de contraseñas para avanzar rápidamente en el juego
+    - Agregado segundo mundo
+
 2024.12.15  Mónica Gómez (Autumn64):
     - Agregado soporte para controles
     - Agregado soporte para dispositivos móviles

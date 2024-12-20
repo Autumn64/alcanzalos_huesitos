@@ -27,4 +27,7 @@ func _on_timer_final_timeout() -> void:
 		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 		return
 	Globals.mover_vidas(1)
+	if Globals.passwords.has(Globals.nivel):
+		get_tree().change_scene_to_file("res://scenes/new_password.tscn")
+		return
 	get_tree().change_scene_to_file("res://scenes/new_level.tscn")

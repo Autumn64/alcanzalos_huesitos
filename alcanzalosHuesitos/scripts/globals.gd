@@ -1,11 +1,15 @@
 extends Node
 
 var controles = false
-var nivel = 1
+var nivel = 3
 var vidas = 3
 var puntos = 0
 var maxp = 0
-const cant_niveles = 3
+const cant_niveles = 4
+
+const passwords: Dictionary = {
+	4: "R3N34G"
+}
 
 func ob_maxp() -> String:
 	return str(maxp)
