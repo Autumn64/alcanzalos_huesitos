@@ -9,7 +9,8 @@ func _on_body_entered(body: Node2D) -> void:
 	bgm.stop()
 	audio_stream_player_2d.play()
 	Globals.aumentar_puntos(100)
-	Globals.aumentar_nivel()
+	if Globals.nivel != -1:
+		Globals.aumentar_nivel()
 	get_tree().paused = true
 
 func _on_timer_timeout() -> void:

@@ -8,6 +8,7 @@ var maxp = 0
 const cant_niveles = 4
 
 const passwords: Dictionary = {
+	-1: "MINUS1",
 	4: "R3N34G"
 }
 

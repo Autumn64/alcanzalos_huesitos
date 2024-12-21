@@ -4,7 +4,6 @@ extends CanvasLayer
 @onready var vidas: Label = $HUD/Vidas
 
 
-
 func _ready() -> void:
 	titulo.text = "Nivel " + str(Globals.nivel)
 	puntos.text = "Puntos: " + Globals.ob_puntos() + "0"

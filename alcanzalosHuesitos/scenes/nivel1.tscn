@@ -299,23 +299,6 @@ libraries = {
 }
 autoplay = "mover"
 
-[node name="Enemigos" type="Node" parent="."]
-
-[node name="Enemigo" parent="Enemigos" instance=ExtResource("4_1ueug")]
-position = Vector2(66, -136)
-
-[node name="Enemigo2" parent="Enemigos" instance=ExtResource("4_1ueug")]
-position = Vector2(34, -232)
-
-[node name="Enemigo3" parent="Enemigos" instance=ExtResource("4_1ueug")]
-position = Vector2(167, -24)
-
-[node name="Enemigo4" parent="Enemigos" instance=ExtResource("4_1ueug")]
-position = Vector2(209, -552)
-
-[node name="Enemigo5" parent="Enemigos" instance=ExtResource("4_1ueug")]
-position = Vector2(107, -424)
-
 [node name="Monedas" type="Node" parent="."]
 
 [node name="Moneda" parent="Monedas" instance=ExtResource("5_45iee")]
@@ -332,6 +315,23 @@ position = Vector2(232, -295)
 
 [node name="Moneda5" parent="Monedas" instance=ExtResource("5_45iee")]
 position = Vector2(232, -359)
+
+[node name="Enemigos" type="Node" parent="."]
+
+[node name="Enemigo" parent="Enemigos" instance=ExtResource("4_1ueug")]
+position = Vector2(66, -136)
+
+[node name="Enemigo2" parent="Enemigos" instance=ExtResource("4_1ueug")]
+position = Vector2(34, -232)
+
+[node name="Enemigo3" parent="Enemigos" instance=ExtResource("4_1ueug")]
+position = Vector2(167, -24)
+
+[node name="Enemigo4" parent="Enemigos" instance=ExtResource("4_1ueug")]
+position = Vector2(209, -552)
+
+[node name="Enemigo5" parent="Enemigos" instance=ExtResource("4_1ueug")]
+position = Vector2(107, -424)
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_h5lek")

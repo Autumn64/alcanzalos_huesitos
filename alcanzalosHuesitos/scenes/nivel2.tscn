@@ -259,38 +259,6 @@ libraries = {
 }
 autoplay = "mover"
 
-[node name="Enemigos" type="Node" parent="."]
-
-[node name="Enemigo" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(98, -21)
-
-[node name="Enemigo2" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(144, -21)
-
-[node name="Enemigo3" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(203, -21)
-
-[node name="Enemigo4" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(114, -517)
-
-[node name="Enemigo5" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(51, -437)
-
-[node name="Enemigo6" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(170, -725)
-
-[node name="Enemigo7" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(76, -773)
-
-[node name="Enemigo8" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(210, -773)
-
-[node name="Enemigo9" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(147, -1237)
-
-[node name="Enemigo10" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(64, -1237)
-
 [node name="Monedas" type="Node" parent="."]
 
 [node name="Moneda" parent="Monedas" instance=ExtResource("6_jgebf")]
@@ -364,6 +332,38 @@ position = Vector2(56, -1237)
 
 [node name="Moneda24" parent="Monedas" instance=ExtResource("6_jgebf")]
 position = Vector2(40, -1253)
+
+[node name="Enemigos" type="Node" parent="."]
+
+[node name="Enemigo" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(98, -21)
+
+[node name="Enemigo2" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(144, -21)
+
+[node name="Enemigo3" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(203, -21)
+
+[node name="Enemigo4" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(114, -517)
+
+[node name="Enemigo5" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(51, -437)
+
+[node name="Enemigo6" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(170, -725)
+
+[node name="Enemigo7" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(76, -773)
+
+[node name="Enemigo8" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(210, -773)
+
+[node name="Enemigo9" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(147, -1237)
+
+[node name="Enemigo10" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(64, -1237)
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_mfimy")

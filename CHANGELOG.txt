@@ -15,6 +15,9 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 CHANGELOG:
 
+2024.12.21  Mónica Gómez (Autumn64):
+    - Agregado easter egg del mundo -1
+
 2024.12.20  Mónica Gómez (Autumn64):
     - Afinados detalles del sistema de contraseñas
 

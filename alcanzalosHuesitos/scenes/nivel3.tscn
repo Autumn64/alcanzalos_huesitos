@@ -447,31 +447,6 @@ libraries = {
 }
 autoplay = "mover"
 
-[node name="Enemigos" type="Node" parent="."]
-
-[node name="Enemigo2" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(155, -405)
-
-[node name="Enemigo" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(142, -21)
-rotation = -0.00156347
-
-[node name="Enemigo3" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(41, -133)
-
-[node name="Enemigo4" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(104, -469)
-rotation = 0.0055079
-
-[node name="Enemigo5" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(155, -805)
-
-[node name="Enemigo7" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(191, -1317)
-
-[node name="Enemigo6" parent="Enemigos" instance=ExtResource("5_5uqn7")]
-position = Vector2(163, -949)
-
 [node name="Monedas" type="Node" parent="."]
 
 [node name="Moneda" parent="Monedas" instance=ExtResource("6_jgebf")]
@@ -534,6 +509,31 @@ position = Vector2(232, -1317)
 
 [node name="Moneda20" parent="Monedas" instance=ExtResource("6_jgebf")]
 position = Vector2(216, -1317)
+
+[node name="Enemigos" type="Node" parent="."]
+
+[node name="Enemigo2" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(155, -405)
+
+[node name="Enemigo" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(142, -21)
+rotation = -0.00156347
+
+[node name="Enemigo3" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(41, -133)
+
+[node name="Enemigo4" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(104, -469)
+rotation = 0.0055079
+
+[node name="Enemigo5" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(155, -805)
+
+[node name="Enemigo7" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(191, -1317)
+
+[node name="Enemigo6" parent="Enemigos" instance=ExtResource("5_5uqn7")]
+position = Vector2(163, -949)
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_8em5y")

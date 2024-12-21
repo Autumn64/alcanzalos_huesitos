@@ -6,7 +6,7 @@ extends CanvasLayer
 @onready var audio: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _ready() -> void:
-	titulo.text = "Nivel " + str(Globals.nivel - 1)
+	titulo.text = "Nivel " + (str(Globals.nivel - 1) if Globals.nivel != -1 else str(Globals.nivel))
 	puntos.text = "Puntuación\n" + Globals.ob_puntos() + "0"
 	vidas.visible = false
 	total.visible = false
@@ -27,7 +27,7 @@ func _on_timer_final_timeout() -> void:
 		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 		return
 	Globals.mover_vidas(1)
-	if Globals.passwords.has(Globals.nivel):
+	if Globals.passwords.has(Globals.nivel) and Globals.nivel != -1:
 		get_tree().change_scene_to_file("res://scenes/new_password.tscn")
 		return
 	get_tree().change_scene_to_file("res://scenes/new_level.tscn")
