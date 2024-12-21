@@ -15,6 +15,4 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 TODO:
 
-    - Crear cuarto, quinto y sexto nivel
-    - Agregar tono de error cuando el usuario ingrese una contraseña incorrecta
-    - Agregar sonido de contraseña exitosa
+    - Crear quinto y sexto nivel
