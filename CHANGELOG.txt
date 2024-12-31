@@ -15,6 +15,10 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 CHANGELOG:
 
+2024.12.31  Mónica Gómez (Autumn64):
+    - Arreglado bug de los enemigos al estar contenidos dentro de plataformas y otros objetos
+    - Agregado nivel 5
+
 2024.12.21  Mónica Gómez (Autumn64):
     - Agregado easter egg del mundo -1
 

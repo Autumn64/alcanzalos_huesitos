@@ -8,8 +8,8 @@ extends Node2D
 @onready var animated_sprite_2: AnimatedSprite2D = $AnimatedSprite2D2
 @onready var audio_stream: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var timer: Timer = $Timer
-@onready var bgm: AudioStreamPlayer2D = $"../../BGM"
-@onready var corazon: AnimatedSprite2D = $"../../HUD/AnimatedSprite2D"
+@onready var bgm: AudioStreamPlayer2D = $"/root/Nivel/BGM"
+@onready var corazon: AnimatedSprite2D = $"/root/Nivel/HUD/AnimatedSprite2D"
 
 const SPEED = 30
 var dir = 1

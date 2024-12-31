@@ -13,6 +13,8 @@ config_version=5
 config/name="Alcanzalos Huesitos"
 run/main_scene="res://scenes/title_screen.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
+boot_splash/bg_color=Color(0.0679827, 0.0679827, 0.0679827, 1)
+boot_splash/image="res://alcanzalos_huesitos.icon.png"
 config/icon="res://assets/sprites/iconogatov1.png"
 
 [autoload]
@@ -23,6 +25,7 @@ Globals="*res://scripts/globals.gd"
 
 window/size/viewport_width=256
 window/size/viewport_height=240
+window/size/mode=2
 window/stretch/mode="viewport"
 
 [input]
