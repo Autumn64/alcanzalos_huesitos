@@ -5,7 +5,7 @@ var nivel = 1
 var vidas = 3
 var puntos = 0
 var maxp = 0
-const cant_niveles = 5
+const cant_niveles = 6
 
 const passwords: Dictionary = {
 	-1: "MINUS1",
